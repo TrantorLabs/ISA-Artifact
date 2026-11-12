@@ -1,0 +1,56 @@
+name: ISA v1.0 source import — one-shot
+on:
+  push:
+    branches: [release/v1.0.0-research-source]
+    paths:
+      - '.github/workflows/isa-v1-source-import.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import-pinned:
+    if: github.ref == 'refs/heads/release/v1.0.0-research-source'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify original fixed-pin 498-file transfer
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum -c publication_transfer/SHA256SUMS.txt
+          unzip -t publication_transfer/ISA_v1.0_source_bca9dac.zip | tail -1
+          python3 - <<'PY'
+          from zipfile import ZipFile
+          from pathlib import PurePosixPath
+          p="publication_transfer/ISA_v1.0_source_bca9dac.zip"
+          with ZipFile(p) as z:
+              paths=[x.filename for x in z.infolist() if not x.is_dir()]
+              assert len(paths)==498,len(paths)
+              assert len(paths)==len(set(paths))
+              assert all(not f.startswith("/") and ".." not in PurePosixPath(f).parts and ".git" not in PurePosixPath(f).parts for f in paths)
+              required=["LICENSE","NOTICE","CITATION.cff","README.md",
+                        "archive/ISA_ARTIFACT_v0.1.0_SOURCE_AND_EVIDENCE.zip",
+                        ".github/workflows/ci.yml","scripts/verify.py",
+                        "results/reference/cases/E00/system-report.json",
+                        "docs/paper/ISA_CN_v1.2_FINAL.md"]
+              assert all(p in paths for p in required)
+              print("PINNED_RESEARCH_SOURCE_498_VERIFIED")
+          PY
+      - name: Expand complete original source; commit only after checksum and manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          unzip -oq publication_transfer/ISA_v1.0_source_bca9dac.zip -d .
+          test -s LICENSE && test -s NOTICE && test -s CITATION.cff
+          test -s scripts/verify.py && test -s formal/check.py
+          # Retain GitHub Actions import workflow. Original verification workflow
+          # is committed by the separately authorized GitHub connector.
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- . ':!.github/workflows/ci.yml'
+          git diff --cached --quiet && { echo 'NO_IMPORT_CHANGE'; exit 1; }
+          git commit -m "research(ISA): restore complete verified bca9dac source and evidence [skip ci]"
+          git push origin HEAD:refs/heads/release/v1.0.0-research-source
