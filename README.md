@@ -1,3 +1,5 @@
+> **Publication release v1.0.0** — Official research implementation maintained at [TrantorLabs/ISA-Artifact](https://github.com/TrantorLabs/ISA-Artifact). This version is derived from the validated original research commit `RcityHunter/ISA-Artifact@bca9dac4810782bd7631245253125d4c163923af`; original historical source and evidence ZIP remain preserved. Publication verification in this repository is authoritative for this release, not the historic ZIP's first incomplete report. This is the **identified, non-anonymous preprint companion**; it is not the separate IEEE S&P blinded artifact.
+
 # ISA — Executable Research Artifact
 
 Independent, reproducible research artifact for **Internal Structured Alignment (ISA)**. ISA asks whether a designated safety constraint genuinely controlled a bounded high-consequence judgment–action formation, and whether independent evidence is sufficient to establish that fact.

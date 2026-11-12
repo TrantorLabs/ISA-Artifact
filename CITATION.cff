@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Cite the frozen ISA paper, the immutable v0.1.0 archive and an exact verified repository commit. The original archive's incomplete Rust verification is historical; later GitHub CI ran Rust."
+message: "Cite the ISA research paper, the public v1.0.0 software release and its exact release commit. The preserved historical v0.1.0 archive had incomplete Rust validation; v1.0.0 must be independently verified."
 title: "ISA Executable Research Artifact"
 type: software
-version: 0.1.0
+version: 1.0.0
 authors:
   - name: "TRANTOR LABS"
 license: Apache-2.0
