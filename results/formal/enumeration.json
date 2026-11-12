@@ -1,0 +1,33 @@
+{
+  "all_form_true_worlds": 4,
+  "canonical_witness": {
+    "negative": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "observation_allow": true,
+    "positive": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ]
+  },
+  "finite_profile": "9 binary binding fields and one five-expression controller",
+  "fq1_collision_classes": 1,
+  "world_count": 2560
+}

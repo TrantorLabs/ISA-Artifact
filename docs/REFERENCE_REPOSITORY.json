@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/TrantorLabs/subject-rooted-governance",
+  "commit": "b428ada1c4805cb9b1db20562ca44d185ac336a0",
+  "reviewed_files": [
+    "README.md",
+    "docs/REPRODUCIBILITY.md",
+    "crates/srg-harness/src/checker.rs (lines 1-175)"
+  ],
+  "reuse": "Research organization, independent checking, raw evidence, reproducibility, artifact delta. No code copied.",
+  "scope": "Reference only. No remote repository was changed."
+}

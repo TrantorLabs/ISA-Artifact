@@ -1,0 +1,186 @@
+SAT
+a_const -> (let ((a!1 (ite (= a_root 1)
+                           false
+                           (ite (= a_root 2)
+                                (and false false)
+                                (ite (= a_root 3) (or false false) true))))
+                 (a!2 (ite (= a_root 1)
+                           false
+                           (ite (= a_root 2)
+                                (and true false)
+                                (ite (= a_root 3) (or true false) true))))
+                 (a!4 (ite (= a_root 1)
+                           true
+                           (ite (= a_root 2)
+                                (and false true)
+                                (ite (= a_root 3) (or false true) true))))
+                 (a!5 (ite (= a_root 1)
+                           true
+                           (ite (= a_root 2)
+                                (and true true)
+                                (ite (= a_root 3) (or true true) true)))))
+           (let ((a!3 (not (= (ite (= a_root 0) false a!1)
+                              (ite (= a_root 0) true a!2))))
+                 (a!6 (not (= (ite (= a_root 0) false a!4)
+                              (ite (= a_root 0) true a!5))))
+                 (a!7 (not (= (ite (= a_root 0) false a!1)
+                              (ite (= a_root 0) false a!4))))
+                 (a!8 (not (= (ite (= a_root 0) true a!2)
+                              (ite (= a_root 0) true a!5)))))
+             (and (or a!3 a!6)
+                  (or a!7 a!8)
+                  (not (ite (= a_root 0) false a!1))
+                  (not (ite (= a_root 0) false a!4))
+                  (not (ite (= a_root 0) true a!2))
+                  (ite (= a_root 0) true a!5))))
+a_root -> 2
+a_attr -> (and (= a_source_actual a_source_bound)
+               (= a_authority_scope 0)
+               (= a_controller_actual a_controller_bound))
+b_source_actual -> 0
+b_attr -> (and (= b_source_actual b_source_bound)
+               (= b_authority_scope 0)
+               (= b_controller_actual b_controller_bound))
+a_path -> (and (= a_decision_instance 0)
+               (= a_execution_instance 0)
+               (= a_decision_link 0)
+               (= a_admission_link 0))
+a_form -> (let ((a!1 (ite (= a_root 1)
+                          false
+                          (ite (= a_root 2)
+                               (and false false)
+                               (ite (= a_root 3) (or false false) true))))
+                (a!2 (ite (= a_root 1)
+                          false
+                          (ite (= a_root 2)
+                               (and true false)
+                               (ite (= a_root 3) (or true false) true))))
+                (a!4 (ite (= a_root 1)
+                          true
+                          (ite (= a_root 2)
+                               (and false true)
+                               (ite (= a_root 3) (or false true) true))))
+                (a!5 (ite (= a_root 1)
+                          true
+                          (ite (= a_root 2)
+                               (and true true)
+                               (ite (= a_root 3) (or true true) true)))))
+          (let ((a!3 (not (= (ite (= a_root 0) false a!1)
+                             (ite (= a_root 0) true a!2))))
+                (a!6 (not (= (ite (= a_root 0) false a!4)
+                             (ite (= a_root 0) true a!5))))
+                (a!7 (not (= (ite (= a_root 0) false a!1)
+                             (ite (= a_root 0) false a!4))))
+                (a!8 (not (= (ite (= a_root 0) true a!2)
+                             (ite (= a_root 0) true a!5)))))
+            (and (= a_decision_instance 0)
+                 (= a_execution_instance 0)
+                 (= a_decision_link 0)
+                 (= a_admission_link 0)
+                 (= a_source_actual a_source_bound)
+                 (= a_authority_scope 0)
+                 (= a_controller_actual a_controller_bound)
+                 (or a!3 a!6)
+                 (or a!7 a!8)
+                 (not (ite (= a_root 0) false a!1))
+                 (not (ite (= a_root 0) false a!4))
+                 (not (ite (= a_root 0) true a!2))
+                 (ite (= a_root 0) true a!5))))
+b_path -> (and (= b_decision_instance 0)
+               (= b_execution_instance 0)
+               (= b_decision_link 0)
+               (= b_admission_link 0))
+b_root -> 0
+b_form -> (let ((a!1 (ite (= b_root 1)
+                          false
+                          (ite (= b_root 2)
+                               (and false false)
+                               (ite (= b_root 3) (or false false) true))))
+                (a!2 (ite (= b_root 1)
+                          false
+                          (ite (= b_root 2)
+                               (and true false)
+                               (ite (= b_root 3) (or true false) true))))
+                (a!4 (ite (= b_root 1)
+                          true
+                          (ite (= b_root 2)
+                               (and false true)
+                               (ite (= b_root 3) (or false true) true))))
+                (a!5 (ite (= b_root 1)
+                          true
+                          (ite (= b_root 2)
+                               (and true true)
+                               (ite (= b_root 3) (or true true) true)))))
+          (let ((a!3 (not (= (ite (= b_root 0) false a!1)
+                             (ite (= b_root 0) true a!2))))
+                (a!6 (not (= (ite (= b_root 0) false a!4)
+                             (ite (= b_root 0) true a!5))))
+                (a!7 (not (= (ite (= b_root 0) false a!1)
+                             (ite (= b_root 0) false a!4))))
+                (a!8 (not (= (ite (= b_root 0) true a!2)
+                             (ite (= b_root 0) true a!5)))))
+            (and (= b_decision_instance 0)
+                 (= b_execution_instance 0)
+                 (= b_decision_link 0)
+                 (= b_admission_link 0)
+                 (= b_source_actual b_source_bound)
+                 (= b_authority_scope 0)
+                 (= b_controller_actual b_controller_bound)
+                 (or a!3 a!6)
+                 (or a!7 a!8)
+                 (not (ite (= b_root 0) false a!1))
+                 (not (ite (= b_root 0) false a!4))
+                 (not (ite (= b_root 0) true a!2))
+                 (ite (= b_root 0) true a!5))))
+b_controller_actual -> 0
+b_const -> (let ((a!1 (ite (= b_root 1)
+                           false
+                           (ite (= b_root 2)
+                                (and false false)
+                                (ite (= b_root 3) (or false false) true))))
+                 (a!2 (ite (= b_root 1)
+                           false
+                           (ite (= b_root 2)
+                                (and true false)
+                                (ite (= b_root 3) (or true false) true))))
+                 (a!4 (ite (= b_root 1)
+                           true
+                           (ite (= b_root 2)
+                                (and false true)
+                                (ite (= b_root 3) (or false true) true))))
+                 (a!5 (ite (= b_root 1)
+                           true
+                           (ite (= b_root 2)
+                                (and true true)
+                                (ite (= b_root 3) (or true true) true)))))
+           (let ((a!3 (not (= (ite (= b_root 0) false a!1)
+                              (ite (= b_root 0) true a!2))))
+                 (a!6 (not (= (ite (= b_root 0) false a!4)
+                              (ite (= b_root 0) true a!5))))
+                 (a!7 (not (= (ite (= b_root 0) false a!1)
+                              (ite (= b_root 0) false a!4))))
+                 (a!8 (not (= (ite (= b_root 0) true a!2)
+                              (ite (= b_root 0) true a!5)))))
+             (and (or a!3 a!6)
+                  (or a!7 a!8)
+                  (not (ite (= b_root 0) false a!1))
+                  (not (ite (= b_root 0) false a!4))
+                  (not (ite (= b_root 0) true a!2))
+                  (ite (= b_root 0) true a!5))))
+b_authority_scope -> 0
+b_execution_instance -> 0
+a_execution_instance -> 0
+a_source_bound -> 0
+b_decision_instance -> 0
+a_source_actual -> 0
+a_decision_link -> 0
+b_admission_link -> 0
+a_authority_scope -> 0
+b_decision_link -> 0
+a_controller_bound -> 0
+a_admission_link -> 0
+b_source_bound -> 0
+a_controller_actual -> 0
+b_controller_bound -> 0
+a_decision_instance -> 0
+

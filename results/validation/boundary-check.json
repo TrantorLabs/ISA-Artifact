@@ -1,0 +1,40 @@
+{
+  "cargo_typecheck": "NOT_PERFORMED_BY_THIS_SCRIPT",
+  "checks": [
+    "all_seven_source_files_byte_identical",
+    "seven_local_rust_packages",
+    "zero_registry_dependencies",
+    "checker_dependency_is_core_only",
+    "runtime_cannot_import_research_or_formal",
+    "no_hidden_import_or_file_inclusion_in_runtime_sources",
+    "reference_checker_and_collector_do_not_import_oracle"
+  ],
+  "dependency_graph": {
+    "isa-checker": [
+      "isa-core"
+    ],
+    "isa-core": [],
+    "isa-engine": [
+      "isa-core"
+    ],
+    "isa-evidence": [
+      "isa-core"
+    ],
+    "isa-harness": [
+      "isa-core",
+      "isa-engine",
+      "isa-scenarios",
+      "isa-oracle"
+    ],
+    "isa-oracle": [
+      "isa-core",
+      "isa-engine"
+    ],
+    "isa-scenarios": [
+      "isa-core",
+      "isa-engine",
+      "isa-evidence"
+    ]
+  },
+  "status": "PASS"
+}

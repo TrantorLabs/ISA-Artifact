@@ -1,0 +1,49 @@
+# Local-package lockfile supplied with the source candidate.
+# Not regenerated or validated by Cargo in the delivery environment.
+# All packages are local; there are no registry dependencies.
+version = 4
+
+[[package]]
+name = "isa-core"
+version = "0.1.0"
+
+[[package]]
+name = "isa-engine"
+version = "0.1.0"
+dependencies = [
+ "isa-core",
+]
+
+[[package]]
+name = "isa-evidence"
+version = "0.1.0"
+dependencies = [
+ "isa-core",
+]
+
+[[package]]
+name = "isa-harness"
+version = "0.1.0"
+dependencies = [
+ "isa-core",
+ "isa-engine",
+ "isa-oracle",
+ "isa-scenarios",
+]
+
+[[package]]
+name = "isa-oracle"
+version = "0.1.0"
+dependencies = [
+ "isa-core",
+ "isa-engine",
+]
+
+[[package]]
+name = "isa-scenarios"
+version = "0.1.0"
+dependencies = [
+ "isa-core",
+ "isa-engine",
+ "isa-evidence",
+]

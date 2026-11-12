@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite the ISA research paper, the public v1.0.0 software release and its exact release commit. The preserved historical v0.1.0 archive had incomplete Rust validation; v1.0.0 must be independently verified."
+title: "ISA Executable Research Artifact"
+type: software
+version: 1.0.0
+authors:
+  - name: "TRANTOR LABS"
+license: Apache-2.0
+abstract: "Finite deterministic implementation of ISA formation control, evidence-only adjudication, independent research validation and bounded countermodel search. Original v0.1.0 validation was incomplete; later exact-commit Rust/Python/Z3 verification has been executed."

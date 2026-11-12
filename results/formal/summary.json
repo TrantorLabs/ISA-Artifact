@@ -1,0 +1,8 @@
+{
+  "solver": "Z3 4.13.3.0",
+  "groups": 8,
+  "queries": 17,
+  "matched": 17,
+  "enumerated_worlds": 2560,
+  "scope": "bounded finite relational instances only"
+}

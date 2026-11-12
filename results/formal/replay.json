@@ -1,0 +1,47 @@
+{
+  "backend": "python-reference",
+  "observation_equal": true,
+  "rust_replay": "NOT_RUN",
+  "solver_witness_replayed": true,
+  "worlds": [
+    {
+      "checker_verdict": "Conformant",
+      "code": [
+        "E:recipient",
+        "E:transaction",
+        "E:dual",
+        "E:channel",
+        "A:0,1",
+        "A:2,3",
+        "A:4,5"
+      ],
+      "formation_truth": {
+        "attribution": true,
+        "constraint": true,
+        "form_conform": true,
+        "path": true
+      },
+      "root": 6,
+      "solver_controller": 2
+    },
+    {
+      "checker_verdict": "Non-conformant",
+      "code": [
+        "E:recipient",
+        "E:transaction",
+        "E:dual",
+        "E:channel",
+        "A:0,1",
+        "A:2,3"
+      ],
+      "formation_truth": {
+        "attribution": true,
+        "constraint": false,
+        "form_conform": false,
+        "path": true
+      },
+      "root": 4,
+      "solver_controller": 0
+    }
+  ]
+}

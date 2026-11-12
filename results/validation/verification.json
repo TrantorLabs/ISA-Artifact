@@ -1,0 +1,121 @@
+{
+  "cargo_available": false,
+  "ci_remote_run": "NOT_RUN",
+  "format_rustfmt": "NOT_RUN",
+  "mode": "reference-only",
+  "note": "Passed reference/formal gates must not be reported as compiled Rust validation.",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "production_attestation": "NOT_IMPLEMENTED",
+  "python": "3.13.5",
+  "release_ready": false,
+  "rustc_available": false,
+  "source_file_count": 81,
+  "source_sha256": "5da6e0d5e17451105a44cf68d33fa888e06acdccee6ac8dde320a7658b1597e5",
+  "status": "VALIDATION_INCOMPLETE",
+  "steps": [
+    {
+      "command": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/audit_boundaries.py"
+      ],
+      "exit_code": 0,
+      "name": "boundary-check",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "name": "reference-tests",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python3",
+        "research/reference/run.py"
+      ],
+      "exit_code": 0,
+      "name": "reference-run",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python3",
+        "research/tests/mutation_check.py"
+      ],
+      "exit_code": 0,
+      "name": "reference-mutations",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python3",
+        "formal/check.py"
+      ],
+      "exit_code": 0,
+      "name": "formal-z3",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/replay_formal.py"
+      ],
+      "exit_code": 0,
+      "name": "formal-witness-replay",
+      "status": "PASS"
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python3",
+        "scripts/determinism.py"
+      ],
+      "exit_code": 0,
+      "name": "reference-determinism",
+      "status": "PASS"
+    },
+    {
+      "exit_code": null,
+      "name": "rust-runtime-build",
+      "reason": "Rust compiler/Cargo unavailable in this environment",
+      "status": "NOT_RUN"
+    },
+    {
+      "exit_code": null,
+      "name": "rust-runtime-tests",
+      "reason": "Rust compiler/Cargo unavailable in this environment",
+      "status": "NOT_RUN"
+    },
+    {
+      "exit_code": null,
+      "name": "rust-research-build",
+      "reason": "Rust compiler/Cargo unavailable in this environment",
+      "status": "NOT_RUN"
+    },
+    {
+      "exit_code": null,
+      "name": "rust-research-tests",
+      "reason": "Rust compiler/Cargo unavailable in this environment",
+      "status": "NOT_RUN"
+    },
+    {
+      "exit_code": null,
+      "name": "rust-harness",
+      "reason": "Rust compiler/Cargo unavailable in this environment",
+      "status": "NOT_RUN"
+    },
+    {
+      "exit_code": null,
+      "name": "rust-differential",
+      "reason": "Rust compiler/Cargo unavailable in this environment",
+      "status": "NOT_RUN"
+    }
+  ]
+}

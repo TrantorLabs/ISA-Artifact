@@ -1,0 +1,22 @@
+{
+  "audit_reality": {
+    "independence": true,
+    "integrity": true,
+    "localization": true,
+    "prerequisite": true,
+    "preservation": false,
+    "scopecoverage": false
+  },
+  "formation_states": {
+    "attribution": "not_adjudicated",
+    "constraint": "not_adjudicated",
+    "path": "not_adjudicated"
+  },
+  "formation_truth": {
+    "attribution": true,
+    "constraint": true,
+    "form_conform": true,
+    "path": true
+  },
+  "verdict": "Unadjudicable"
+}

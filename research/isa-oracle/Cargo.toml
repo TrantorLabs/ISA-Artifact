@@ -1,0 +1,11 @@
+[package]
+name = "isa-oracle"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+[dependencies]
+isa-core = { path = "../../runtime/isa-core" }
+isa-engine = { path = "../../runtime/isa-engine" }
+[lints]
+workspace = true

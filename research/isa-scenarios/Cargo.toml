@@ -1,0 +1,12 @@
+[package]
+name = "isa-scenarios"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+[dependencies]
+isa-core = { path = "../../runtime/isa-core" }
+isa-engine = { path = "../../runtime/isa-engine" }
+isa-evidence = { path = "../../runtime/isa-evidence" }
+[lints]
+workspace = true

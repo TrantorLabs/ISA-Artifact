@@ -1,0 +1,22 @@
+{
+  "audit_reality": {
+    "independence": true,
+    "integrity": true,
+    "localization": true,
+    "prerequisite": true,
+    "preservation": true,
+    "scopecoverage": true
+  },
+  "formation_states": {
+    "attribution": "supported",
+    "constraint": "refuted",
+    "path": "supported"
+  },
+  "formation_truth": {
+    "attribution": true,
+    "constraint": false,
+    "form_conform": false,
+    "path": true
+  },
+  "verdict": "Non-conformant"
+}

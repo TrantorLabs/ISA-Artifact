@@ -1,0 +1,10 @@
+{
+  "amount": "200000",
+  "channel": "standard",
+  "check.channel": "1",
+  "check.dual": "1",
+  "check.recipient": "1",
+  "check.transaction": "1",
+  "explanation": "Payment evaluated under declared enterprise rules.",
+  "outcome": "paid"
+}

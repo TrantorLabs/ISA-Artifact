@@ -1,0 +1,89 @@
+name: ISA Artifact verification
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: isa-verify-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  full-research-validation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout exact source
+        uses: actions/checkout@v4
+      - name: Verify immutable original research package
+        shell: bash
+        run: |
+          (cd archive && sha256sum -c ISA_ARTIFACT_v0.1.0_SOURCE_AND_EVIDENCE.zip.sha256)
+          unzip -t archive/ISA_ARTIFACT_v0.1.0_SOURCE_AND_EVIDENCE.zip | tail -n 1
+      - name: Install pinned Rust toolchain
+        shell: bash
+        run: |
+          rustup toolchain install 1.85.0 --profile minimal --component rustfmt --component clippy
+          rustup default 1.85.0
+          rustc --version
+          cargo --version
+      - name: Install actual Z3 solver
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y z3 libz3-4
+          z3 -version
+          python3 --version
+      - name: Run all reference, formal and real Rust gates
+        run: python3 scripts/verify.py
+      - name: Verify machine status and required Rust gates
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("results/validation/verification.json")
+          obj = json.loads(p.read_text())
+          required = {"rust-runtime-build", "rust-runtime-tests", "rust-research-build", "rust-research-tests", "rust-harness", "rust-differential"}
+          executed = {s["name"] for s in obj["steps"] if s["status"] == "PASS"}
+          assert obj["mode"] == "full",obj
+          assert obj["release_ready"] is True, obj
+          assert required <= executed, required-executed
+          assert all(s["status"] == "PASS" for s in obj["steps"]), obj
+          print("ISA_ARTIFACT_FULL_GATE_PASS")
+          print(json.dumps({"steps":len(obj["steps"]),"rust_required_passed":sorted(required),"source_files":obj["source_file_count"]},indent=2))
+          PY
+      - name: Preserve raw verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isa-validation-evidence
+          path: |
+            results/validation/
+            results/formal/
+          if-no-files-found: warn
+
+  external-langgraph-counterexample:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout exact source
+        uses: actions/checkout@v4
+      - name: Use Python 3.11 for the independent Agent workflow
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned LangGraph research dependency
+        run: python -m pip install langgraph==1.2.20
+      - name: Verify real admission paths on the external graph
+        run: python research/external/langgraph_counterexample.py --out results/validation/langgraph-counterexample.json
+      - name: Preserve external raw report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: isa-langgraph-bounded-evidence
+          path: results/validation/langgraph-counterexample.json
+          if-no-files-found: warn

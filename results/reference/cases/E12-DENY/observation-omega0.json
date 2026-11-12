@@ -1,0 +1,10 @@
+{
+  "amount": "0",
+  "channel": "standard",
+  "check.channel": "1",
+  "check.dual": "1",
+  "check.recipient": "0",
+  "check.transaction": "1",
+  "explanation": "Payment evaluated under declared enterprise rules.",
+  "outcome": "refused"
+}
