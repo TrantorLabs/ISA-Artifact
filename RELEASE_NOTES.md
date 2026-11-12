@@ -20,3 +20,11 @@ This release demonstrates **bounded** formation-control, model-class and evidenc
 ## Publication boundaries
 
 This official TrantorLabs repository is the **public companion of the complete research preprint**. Its attribution, Git history, LICENSE, NOTICE, and CITATION are intentionally visible. It is **not** the anonymous IEEE S&P reviewer artifact; that independent snapshot must retain its own fixed version, identity scan and review link. No Zenodo DOI or arXiv identifier is assigned by this GitHub release.
+
+## Exact protected-release acceptance
+
+- Source research pin: `RcityHunter/ISA-Artifact@bca9dac4810782bd7631245253125d4c163923af`.
+- Independent official repository tests: [GitHub Actions 43224471236](https://github.com/TrantorLabs/ISA-Artifact/actions/runs/43224471236) — Rust/Python/Z3 full research verification SUCCESS; external LangGraph SUCCESS.
+- Hunter independently approved [TrantorLabs PR #1](https://github.com/TrantorLabs/ISA-Artifact/pull/1) on exact candidate HEAD `2cdb4a460a9f71d67fc51024fe2e4824ff13ddf5`.
+- Research source normally merged into the protected `main` as `79e87473ed29f806411a4e33b2a107b4fc75c035`.
+- This addendum records the already-completed release acceptance and triggers the one-time protected-main v1.0.0 publication workflow. It changes **no research code, data, model, bibliography, or historical archive**.
