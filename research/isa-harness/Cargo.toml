@@ -1,0 +1,13 @@
+[package]
+name = "isa-harness"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+[dependencies]
+isa-core = { path = "../../runtime/isa-core" }
+isa-engine = { path = "../../runtime/isa-engine" }
+isa-scenarios = { path = "../isa-scenarios" }
+isa-oracle = { path = "../isa-oracle" }
+[lints]
+workspace = true

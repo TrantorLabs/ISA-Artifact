@@ -1,0 +1,94 @@
+[
+  {
+    "channel": "decision",
+    "fields": {
+      "decision.amount": "200000",
+      "decision.candidate": "candidate-1",
+      "decision.id": "d-1",
+      "decision.instance": "u-1"
+    }
+  },
+  {
+    "channel": "source",
+    "fields": {
+      "source.actual": "supplier-record",
+      "source.bound": "supplier-record",
+      "source.instance": "u-1"
+    }
+  },
+  {
+    "channel": "authority",
+    "fields": {
+      "authority.h1": "H1",
+      "authority.h2": "H2",
+      "authority.instance": "u-1",
+      "authority.scope1": "payment",
+      "authority.scope2": "payment"
+    }
+  },
+  {
+    "channel": "effect",
+    "fields": {
+      "effect.actual_controller": "controller-1",
+      "effect.bound_controller": "controller-1",
+      "effect.instance": "u-1"
+    }
+  },
+  {
+    "channel": "evaluation",
+    "fields": {
+      "evaluation.applicable": "recipient,transaction,dual,channel",
+      "evaluation.channel": "1",
+      "evaluation.dual": "1",
+      "evaluation.instance": "u-1",
+      "evaluation.recipient": "0",
+      "evaluation.transaction": "1"
+    }
+  },
+  {
+    "channel": "program",
+    "fields": {
+      "program.0": "E:recipient",
+      "program.1": "E:transaction",
+      "program.2": "E:dual",
+      "program.3": "E:channel",
+      "program.4": "A:0,1,2,3",
+      "program.count": "5",
+      "program.root": "4"
+    }
+  },
+  {
+    "channel": "admission",
+    "fields": {
+      "admission.controller": "controller-1",
+      "admission.decision": "d-1",
+      "admission.id": "a-1",
+      "admission.instance": "u-1",
+      "admission.reads": "channel,dual,recipient,transaction",
+      "admission.state": "deny"
+    }
+  },
+  {
+    "channel": "execution",
+    "fields": {
+      "execution.admission": "direct",
+      "execution.amount": "200000",
+      "execution.channel": "standard",
+      "execution.decision": "d-1",
+      "execution.instance": "u-1",
+      "execution.route": "direct",
+      "execution.status": "paid"
+    }
+  },
+  {
+    "channel": "lineage",
+    "fields": {
+      "lineage.authority": "authority",
+      "lineage.control": "evaluation,program,admission",
+      "lineage.effect": "effect,admission",
+      "lineage.eligibility": "evaluation,program,admission",
+      "lineage.path": "decision,admission,execution",
+      "lineage.source": "source"
+    }
+  }
+]

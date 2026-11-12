@@ -1,0 +1,172 @@
+[
+  {
+    "assumptions": "Path and attribution held valid to isolate control, all-pass canonical observation.",
+    "expected": "SAT",
+    "id": "FQ1",
+    "matched": true,
+    "meaning": "Same ordinary observation, distinct actual control/formation.",
+    "scope": "2 instances/worlds; 2 evaluations; 5 controller expressions",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "Faithful, complete monitor projection; not a universal deployment claim.",
+    "expected": "UNSAT",
+    "id": "FQ2",
+    "matched": true,
+    "meaning": "Complete protected structural observation resolves the finite target.",
+    "scope": "All finite relation fields of two worlds",
+    "solver": "4.13.3.0",
+    "status": "UNSAT"
+  },
+  {
+    "assumptions": "Deliberately insufficient bridge; remaining structural dimensions are free.",
+    "expected": "SAT",
+    "id": "FQ2-WEAK",
+    "matched": true,
+    "meaning": "Program evidence alone does not establish Path and Attribution.",
+    "scope": "Same finite class as FQ2",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "Constructor constraints are on relation allocation and instructions, not FormConform labels.",
+    "expected": "UNSAT",
+    "id": "FQ3",
+    "matched": true,
+    "meaning": "A concrete bound-and-AND constructor removes the finite ambiguity.",
+    "scope": "Finite constructor class",
+    "solver": "4.13.3.0",
+    "status": "UNSAT"
+  },
+  {
+    "assumptions": "All-pass observation.",
+    "expected": "SAT",
+    "id": "FQ3-NONVACUOUS",
+    "matched": true,
+    "meaning": "Constructor admits real normal execution.",
+    "scope": "One constructor world",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "Same policy; input intervention only.",
+    "expected": "SAT",
+    "id": "FQ3-DENIAL",
+    "matched": true,
+    "meaning": "Constructor also rejects a forbidden evaluation vector.",
+    "scope": "One constructor world",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "No free Path/Attr/Const/Audit inputs.",
+    "expected": "SAT",
+    "id": "FQ4-PATH",
+    "matched": true,
+    "meaning": "Search a 3+1 deletion witness from actual relations.",
+    "scope": "One world, six query/evidence relations",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "No free Path/Attr/Const/Audit inputs.",
+    "expected": "SAT",
+    "id": "FQ4-ATTR",
+    "matched": true,
+    "meaning": "Search a 3+1 deletion witness from actual relations.",
+    "scope": "One world, six query/evidence relations",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "No free Path/Attr/Const/Audit inputs.",
+    "expected": "SAT",
+    "id": "FQ4-CONST",
+    "matched": true,
+    "meaning": "Search a 3+1 deletion witness from actual relations.",
+    "scope": "One world, six query/evidence relations",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "No free Path/Attr/Const/Audit inputs.",
+    "expected": "SAT",
+    "id": "FQ4-AUDIT",
+    "matched": true,
+    "meaning": "Search a 3+1 deletion witness from actual relations.",
+    "scope": "One world, six query/evidence relations",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "Mutation ignores required evidence; protected root remains fixed.",
+    "expected": "UNSAT",
+    "id": "FQ5",
+    "matched": true,
+    "meaning": "Detect false certainty in a separate evidence-only algorithm.",
+    "scope": "Finite world plus monitor/evidence relations",
+    "solver": "4.13.3.0",
+    "status": "UNSAT"
+  },
+  {
+    "assumptions": "Mutation ignores required evidence; protected root remains fixed.",
+    "expected": "SAT",
+    "id": "FQ5-MUTANT",
+    "matched": true,
+    "meaning": "Detect false certainty in a separate evidence-only algorithm.",
+    "scope": "Finite world plus monitor/evidence relations",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "This is a recorded limitation, not a claimed in-scope defence.",
+    "expected": "SAT",
+    "id": "FQ5-TRUST-BREACH",
+    "matched": true,
+    "meaning": "A compromised trusted monitor can create undetectable false certainty.",
+    "scope": "Outside the protected-root assumption",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "Mutant maps missing evidence to false; reference abstains.",
+    "expected": "UNSAT",
+    "id": "FQ6",
+    "matched": true,
+    "meaning": "Do not report absent control evidence as a negative formation fact.",
+    "scope": "One scoped query in the finite model",
+    "solver": "4.13.3.0",
+    "status": "UNSAT"
+  },
+  {
+    "assumptions": "Mutant maps missing evidence to false; reference abstains.",
+    "expected": "SAT",
+    "id": "FQ6-MUTANT",
+    "matched": true,
+    "meaning": "Do not report absent control evidence as a negative formation fact.",
+    "scope": "One scoped query in the finite model",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "System channel/path relations are separate from the standard instance.",
+    "expected": "SAT",
+    "id": "FQ7",
+    "matched": true,
+    "meaning": "Current conformant instance does not prove the whole system property.",
+    "scope": "Standard plus batch channel, one additional direct path",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  },
+  {
+    "assumptions": "System channel/path relations are separate from the standard instance.",
+    "expected": "SAT",
+    "id": "FQ8",
+    "matched": true,
+    "meaning": "Current conformant instance does not prove the whole system property.",
+    "scope": "Standard plus batch channel, one additional direct path",
+    "solver": "4.13.3.0",
+    "status": "SAT"
+  }
+]

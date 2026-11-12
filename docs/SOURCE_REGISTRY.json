@@ -1,0 +1,37 @@
+[
+  {
+    "source": "01-ISA-ARTIFACT-CONF-01｜ISA 理论—工件一致性与定义权基线 v0.1(1).md",
+    "path": "docs/anchors/CONF-01.md",
+    "sha256": "e5317e4d6a77b09dff6b93f403dd0b38e1262239894e23f04f123ceb1d142522"
+  },
+  {
+    "source": "02- ISA 可执行语义与核心对象关系基线 v0.1(1).md",
+    "path": "docs/anchors/CORE-01.md",
+    "sha256": "9a9824e456007efcec40d356a0aad0b03fbd1c388fa0f8db0fadcbd569b7f925"
+  },
+  {
+    "source": "03-ISA Scenario、Ground Truth、Fault Injection 与独立评测基线 v0.1(1).md",
+    "path": "docs/anchors/EVAL-01.md",
+    "sha256": "d534474dfbe5ffa7408051d2bb138b16a9e3cb53bcf02b022460d3f931d97d63"
+  },
+  {
+    "source": "04-ISA 有限形式模型、反例搜索与证明边界基线 v0.1.md",
+    "path": "docs/anchors/FORMAL-01.md",
+    "sha256": "cb5647ee1563c211df34746c3c995bdb3a74347a999a4d4ccae8bd1b4064746a"
+  },
+  {
+    "source": "05-Gate A Patch 1：必须修.md",
+    "path": "docs/anchors/GATE-A.md",
+    "sha256": "f6bd6bc04e9c2450d76d88eb2ac7bbfc668ef17cd3c99cf82d2afeaf747b9c55"
+  },
+  {
+    "source": "06-Artifact Repository Baseline + Implementation Architecture v0.1.md",
+    "path": "docs/anchors/IMPL-01.md",
+    "sha256": "32b4c7ebf500e6f6a14b59e01126a57db240e13ad50b45bf7d9d66a509f5bf54"
+  },
+  {
+    "source": "ISA_CN_v1.2_FINAL_阅读稿.md",
+    "path": "docs/paper/ISA_CN_v1.2_FINAL.md",
+    "sha256": "caab8b9d2f9c79de710a76d477513d0479d7a9cc33177ba18cb89c8ac2b17ac5"
+  }
+]

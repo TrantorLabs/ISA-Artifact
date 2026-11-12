@@ -1,0 +1,13 @@
+{
+  "backend": "reference",
+  "scenarios": 22,
+  "matched": 22,
+  "verdict_counts": {
+    "Conformant": 5,
+    "Non-conformant": 8,
+    "Unadjudicable": 9
+  },
+  "claim": "Directed synthetic cases, not empirical safety probabilities.",
+  "rust_execution": "NOT_RUN"
+}
+

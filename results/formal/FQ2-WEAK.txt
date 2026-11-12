@@ -1,0 +1,22 @@
+SAT
+b_source_actual -> 0
+a_authority_scope -> 0
+b_execution_instance -> 0
+b_authority_scope -> 0
+a_execution_instance -> 0
+b_controller_bound -> 0
+a_source_bound -> 0
+a_controller_bound -> 1
+b_decision_link -> 0
+a_decision_instance -> 0
+a_decision_link -> 0
+b_controller_actual -> 0
+a_source_actual -> 1
+a_controller_actual -> 0
+b_admission_link -> 0
+b_source_bound -> 0
+a_admission_link -> 0
+b_decision_instance -> 0
+b_root -> 2
+a_root -> 2
+

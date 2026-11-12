@@ -1,0 +1,9 @@
+{
+  "actual": "batch,privileged,standard",
+  "edges": "candidate>gate,executor-batch>batch,executor-privileged>privileged,executor-standard>standard,gate>executor-batch,gate>executor-privileged,gate>executor-standard",
+  "gate.gate.outputs": "0,1",
+  "gates": "gate",
+  "governed": "batch,privileged,standard",
+  "root": "candidate",
+  "schema": "isa-system-1"
+}

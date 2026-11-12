@@ -1,0 +1,340 @@
+SAT
+e_lineage_4 -> 0
+w_attr -> (and (= w_source_actual w_source_bound)
+               (= w_authority_scope 0)
+               (= w_controller_actual w_controller_bound))
+w_const -> (let ((a!1 (ite (= w_root 1)
+                           false
+                           (ite (= w_root 2)
+                                (and false false)
+                                (ite (= w_root 3) (or false false) true))))
+                 (a!2 (ite (= w_root 1)
+                           false
+                           (ite (= w_root 2)
+                                (and true false)
+                                (ite (= w_root 3) (or true false) true))))
+                 (a!4 (ite (= w_root 1)
+                           true
+                           (ite (= w_root 2)
+                                (and false true)
+                                (ite (= w_root 3) (or false true) true))))
+                 (a!5 (ite (= w_root 1)
+                           true
+                           (ite (= w_root 2)
+                                (and true true)
+                                (ite (= w_root 3) (or true true) true)))))
+           (let ((a!3 (not (= (ite (= w_root 0) false a!1)
+                              (ite (= w_root 0) true a!2))))
+                 (a!6 (not (= (ite (= w_root 0) false a!4)
+                              (ite (= w_root 0) true a!5))))
+                 (a!7 (not (= (ite (= w_root 0) false a!1)
+                              (ite (= w_root 0) false a!4))))
+                 (a!8 (not (= (ite (= w_root 0) true a!2)
+                              (ite (= w_root 0) true a!5)))))
+             (and (or a!3 a!6)
+                  (or a!7 a!8)
+                  (not (ite (= w_root 0) false a!1))
+                  (not (ite (= w_root 0) false a!4))
+                  (not (ite (= w_root 0) true a!2))
+                  (ite (= w_root 0) true a!5))))
+e_seal_producer -> 0
+w_controller_bound -> 0
+e_execution_instance -> 1
+e_present_1 -> 0
+e_audit_established -> (and (= e_producer e_seal_producer)
+                            (not (and (= e_writer0 1) (= e_writer1 1)))
+                            (= e_lineage_0 0)
+                            (= e_lineage_1 1)
+                            (= e_lineage_2 2)
+                            (= e_lineage_3 3)
+                            (= e_lineage_4 4)
+                            (= e_lineage_5 5)
+                            (= e_decision_instance w_decision_instance)
+                            (= e_execution_instance w_execution_instance)
+                            (= e_decision_link w_decision_link)
+                            (= e_admission_link w_admission_link)
+                            (= e_source_actual w_source_actual)
+                            (= e_source_bound w_source_bound)
+                            (= e_authority_scope w_authority_scope)
+                            (= e_controller_actual w_controller_actual)
+                            (= e_controller_bound w_controller_bound)
+                            (= e_root w_root)
+                            (= e_present_0 1)
+                            (= e_present_1 1)
+                            (= e_present_2 1)
+                            (= e_present_3 1)
+                            (= e_present_4 1)
+                            (= e_present_5 1)
+                            (= e_requested_0 1)
+                            (= e_requested_1 1)
+                            (= e_requested_2 1)
+                            (= e_requested_3 1)
+                            (= e_requested_4 1)
+                            (= e_requested_5 1))
+e_reported_verdict -> (let ((a!1 (and (= e_producer e_seal_producer)
+                                      (not (and (= e_writer0 1) (= e_writer1 1)))
+                                      (= e_lineage_0 0)
+                                      (= e_lineage_1 1)
+                                      (= e_lineage_2 2)
+                                      (= e_lineage_3 3)
+                                      (= e_lineage_4 4)
+                                      (= e_lineage_5 5)
+                                      (= e_decision_instance
+                                         w_decision_instance)
+                                      (= e_execution_instance
+                                         w_execution_instance)
+                                      (= e_decision_link w_decision_link)
+                                      (= e_admission_link w_admission_link)
+                                      (= e_source_actual w_source_actual)
+                                      (= e_source_bound w_source_bound)
+                                      (= e_authority_scope w_authority_scope)
+                                      (= e_controller_actual
+                                         w_controller_actual)
+                                      (= e_controller_bound w_controller_bound)
+                                      (= e_root w_root)
+                                      (= e_present_0 1)
+                                      (= e_present_1 1)
+                                      (= e_present_2 1)
+                                      (= e_present_3 1)
+                                      (= e_present_4 1)
+                                      (= e_present_5 1)
+                                      (= e_requested_0 1)
+                                      (= e_requested_1 1)
+                                      (= e_requested_2 1)
+                                      (= e_requested_3 1)
+                                      (= e_requested_4 1)
+                                      (= e_requested_5 1)))
+                            (a!2 (ite (= e_root 1)
+                                      false
+                                      (ite (= e_root 2)
+                                           (and false false)
+                                           (ite (= e_root 3)
+                                                (or false false)
+                                                true))))
+                            (a!3 (ite (= e_root 1)
+                                      false
+                                      (ite (= e_root 2)
+                                           (and true false)
+                                           (ite (= e_root 3)
+                                                (or true false)
+                                                true))))
+                            (a!5 (ite (= e_root 1)
+                                      true
+                                      (ite (= e_root 2)
+                                           (and false true)
+                                           (ite (= e_root 3)
+                                                (or false true)
+                                                true))))
+                            (a!6 (ite (= e_root 1)
+                                      true
+                                      (ite (= e_root 2)
+                                           (and true true)
+                                           (ite (= e_root 3)
+                                                (or true true)
+                                                true)))))
+                      (let ((a!4 (not (= (ite (= e_root 0) false a!2)
+                                         (ite (= e_root 0) true a!3))))
+                            (a!7 (not (= (ite (= e_root 0) false a!5)
+                                         (ite (= e_root 0) true a!6))))
+                            (a!8 (not (= (ite (= e_root 0) false a!2)
+                                         (ite (= e_root 0) false a!5))))
+                            (a!9 (not (= (ite (= e_root 0) true a!3)
+                                         (ite (= e_root 0) true a!6)))))
+                      (let ((a!10 (and (= e_decision_instance 0)
+                                       (= e_execution_instance 0)
+                                       (= e_decision_link 0)
+                                       (= e_admission_link 0)
+                                       (= e_source_actual e_source_bound)
+                                       (= e_authority_scope 0)
+                                       (= e_controller_actual
+                                          e_controller_bound)
+                                       (or a!4 a!7)
+                                       (or a!8 a!9)
+                                       (not (ite (= e_root 0) false a!2))
+                                       (not (ite (= e_root 0) false a!5))
+                                       (not (ite (= e_root 0) true a!3))
+                                       (ite (= e_root 0) true a!6))))
+                        (ite a!1 (ite a!10 1 0) (- 1)))))
+e_requested_2 -> 0
+e_source_bound -> 0
+e_present_5 -> 0
+w_form -> (let ((a!1 (ite (= w_root 1)
+                          false
+                          (ite (= w_root 2)
+                               (and false false)
+                               (ite (= w_root 3) (or false false) true))))
+                (a!2 (ite (= w_root 1)
+                          false
+                          (ite (= w_root 2)
+                               (and true false)
+                               (ite (= w_root 3) (or true false) true))))
+                (a!4 (ite (= w_root 1)
+                          true
+                          (ite (= w_root 2)
+                               (and false true)
+                               (ite (= w_root 3) (or false true) true))))
+                (a!5 (ite (= w_root 1)
+                          true
+                          (ite (= w_root 2)
+                               (and true true)
+                               (ite (= w_root 3) (or true true) true)))))
+          (let ((a!3 (not (= (ite (= w_root 0) false a!1)
+                             (ite (= w_root 0) true a!2))))
+                (a!6 (not (= (ite (= w_root 0) false a!4)
+                             (ite (= w_root 0) true a!5))))
+                (a!7 (not (= (ite (= w_root 0) false a!1)
+                             (ite (= w_root 0) false a!4))))
+                (a!8 (not (= (ite (= w_root 0) true a!2)
+                             (ite (= w_root 0) true a!5)))))
+            (and (= w_decision_instance 0)
+                 (= w_execution_instance 0)
+                 (= w_decision_link 0)
+                 (= w_admission_link 0)
+                 (= w_source_actual w_source_bound)
+                 (= w_authority_scope 0)
+                 (= w_controller_actual w_controller_bound)
+                 (or a!3 a!6)
+                 (or a!7 a!8)
+                 (not (ite (= w_root 0) false a!1))
+                 (not (ite (= w_root 0) false a!4))
+                 (not (ite (= w_root 0) true a!2))
+                 (ite (= w_root 0) true a!5))))
+e_authority_scope -> 1
+e_requested_0 -> 0
+w_path -> (and (= w_decision_instance 0)
+               (= w_execution_instance 0)
+               (= w_decision_link 0)
+               (= w_admission_link 0))
+e_lineage_5 -> 0
+e_present_4 -> 0
+e_lineage_0 -> (- 1)
+e_audit_truth -> (let ((a!1 (ite (= e_root 1)
+                                 false
+                                 (ite (= e_root 2)
+                                      (and false false)
+                                      (ite (= e_root 3) (or false false) true))))
+                       (a!2 (ite (= e_root 1)
+                                 false
+                                 (ite (= e_root 2)
+                                      (and true false)
+                                      (ite (= e_root 3) (or true false) true))))
+                       (a!4 (ite (= e_root 1)
+                                 true
+                                 (ite (= e_root 2)
+                                      (and false true)
+                                      (ite (= e_root 3) (or false true) true))))
+                       (a!5 (ite (= e_root 1)
+                                 true
+                                 (ite (= e_root 2)
+                                      (and true true)
+                                      (ite (= e_root 3) (or true true) true))))
+                       (a!9 (ite (= w_root 1)
+                                 false
+                                 (ite (= w_root 2)
+                                      (and false false)
+                                      (ite (= w_root 3) (or false false) true))))
+                       (a!10 (ite (= w_root 1)
+                                  false
+                                  (ite (= w_root 2)
+                                       (and true false)
+                                       (ite (= w_root 3) (or true false) true))))
+                       (a!12 (ite (= w_root 1)
+                                  true
+                                  (ite (= w_root 2)
+                                       (and false true)
+                                       (ite (= w_root 3) (or false true) true))))
+                       (a!13 (ite (= w_root 1)
+                                  true
+                                  (ite (= w_root 2)
+                                       (and true true)
+                                       (ite (= w_root 3) (or true true) true)))))
+                 (let ((a!3 (not (= (ite (= e_root 0) false a!1)
+                                    (ite (= e_root 0) true a!2))))
+                       (a!6 (not (= (ite (= e_root 0) false a!4)
+                                    (ite (= e_root 0) true a!5))))
+                       (a!7 (not (= (ite (= e_root 0) false a!1)
+                                    (ite (= e_root 0) false a!4))))
+                       (a!8 (not (= (ite (= e_root 0) true a!2)
+                                    (ite (= e_root 0) true a!5))))
+                       (a!11 (not (= (ite (= w_root 0) false a!9)
+                                     (ite (= w_root 0) true a!10))))
+                       (a!14 (not (= (ite (= w_root 0) false a!12)
+                                     (ite (= w_root 0) true a!13))))
+                       (a!15 (not (= (ite (= w_root 0) false a!9)
+                                     (ite (= w_root 0) false a!12))))
+                       (a!16 (not (= (ite (= w_root 0) true a!10)
+                                     (ite (= w_root 0) true a!13))))
+                       (a!17 (and (not (ite (= e_root 0) false a!1))
+                                  (not (ite (= e_root 0) false a!4))
+                                  (not (ite (= e_root 0) true a!2))
+                                  (ite (= e_root 0) true a!5)))
+                       (a!18 (and (not (ite (= w_root 0) false a!9))
+                                  (not (ite (= w_root 0) false a!12))
+                                  (not (ite (= w_root 0) true a!10))
+                                  (ite (= w_root 0) true a!13))))
+                   (and (= e_producer e_seal_producer)
+                        (not (and (= e_writer0 1) (= e_writer1 1)))
+                        (= e_present_0 1)
+                        (= e_present_1 1)
+                        (= e_present_2 1)
+                        (= e_present_3 1)
+                        (= e_present_4 1)
+                        (= e_present_5 1)
+                        (= e_requested_0 1)
+                        (= e_requested_1 1)
+                        (= e_requested_2 1)
+                        (= e_requested_3 1)
+                        (= e_requested_4 1)
+                        (= e_requested_5 1)
+                        (= e_lineage_0 0)
+                        (= e_lineage_1 1)
+                        (= e_lineage_2 2)
+                        (= e_lineage_3 3)
+                        (= e_lineage_4 4)
+                        (= e_lineage_5 5)
+                        (= (and (= e_decision_instance 0)
+                                (= e_execution_instance 0)
+                                (= e_decision_link 0)
+                                (= e_admission_link 0))
+                           (and (= w_decision_instance 0)
+                                (= w_execution_instance 0)
+                                (= w_decision_link 0)
+                                (= w_admission_link 0)))
+                        (= (= e_source_actual e_source_bound)
+                           (= w_source_actual w_source_bound))
+                        (= (= e_authority_scope 0) (= w_authority_scope 0))
+                        (= (= e_controller_actual e_controller_bound)
+                           (= w_controller_actual w_controller_bound))
+                        (= (and (or a!3 a!6) (or a!7 a!8))
+                           (and (or a!11 a!14) (or a!15 a!16)))
+                        (= a!17 a!18))))
+e_writer1 -> 1
+e_present_0 -> 0
+e_source_actual -> 0
+e_lineage_3 -> 0
+e_requested_3 -> 0
+e_writer0 -> 1
+w_source_bound -> 0
+e_lineage_1 -> 0
+e_controller_actual -> 0
+e_root -> 0
+e_admission_link -> 1
+e_producer -> 0
+e_decision_link -> 1
+e_decision_instance -> 1
+e_present_2 -> 0
+e_lineage_2 -> 0
+e_controller_bound -> 0
+e_present_3 -> 0
+e_requested_1 -> 0
+e_requested_4 -> 0
+e_requested_5 -> 0
+w_decision_link -> 0
+w_controller_actual -> 0
+w_authority_scope -> 0
+w_admission_link -> 0
+w_decision_instance -> 0
+w_root -> 2
+w_source_actual -> 0
+w_execution_instance -> 0
+

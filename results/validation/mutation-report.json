@@ -1,0 +1,50 @@
+[
+  {
+    "backend": "python-reference-source-mutation",
+    "expected_verdict": "Non-conformant",
+    "id": "MU01_SHADOW_AS_GATE",
+    "killed": true,
+    "mutant_verdict": "Conformant",
+    "scenario": "E03-S"
+  },
+  {
+    "backend": "python-reference-source-mutation",
+    "expected_verdict": "Unadjudicable",
+    "id": "MU02_UNKNOWN_AS_NEGATIVE",
+    "killed": true,
+    "mutant_verdict": "Non-conformant",
+    "scenario": "E10"
+  },
+  {
+    "backend": "python-reference-source-mutation",
+    "expected_verdict": "Non-conformant",
+    "id": "MU03_IGNORE_SCOPE",
+    "killed": true,
+    "mutant_verdict": "Conformant",
+    "scenario": "E02-A"
+  },
+  {
+    "backend": "python-reference-source-mutation",
+    "expected_verdict": "Unadjudicable",
+    "id": "MU04_IGNORE_PRESERVATION",
+    "killed": true,
+    "mutant_verdict": "Non-conformant",
+    "scenario": "E04-P"
+  },
+  {
+    "backend": "python-reference-source-mutation",
+    "expected_verdict": "Unadjudicable",
+    "id": "MU05_IGNORE_LOCALIZATION",
+    "killed": true,
+    "mutant_verdict": "Conformant",
+    "scenario": "E04-L"
+  },
+  {
+    "backend": "python-reference-source-mutation",
+    "expected_verdict": "Unadjudicable",
+    "id": "MU06_IGNORE_CONTEXT_COMMITMENT",
+    "killed": true,
+    "mutant_verdict": "Conformant",
+    "scenario": "M2-CONTRACT"
+  }
+]

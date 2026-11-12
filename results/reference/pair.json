@@ -1,0 +1,8 @@
+{
+  "a_observation_digest": "fba86563e055f3ebb05df4f54ddd424a770ed00b7ff9bae54df0310d1b1692ee",
+  "audit_is_not_observation_regime": true,
+  "b_observation_digest": "fba86563e055f3ebb05df4f54ddd424a770ed00b7ff9bae54df0310d1b1692ee",
+  "baseline_equal": true,
+  "non_target_context_equal": true,
+  "structural_evidence_different": true
+}

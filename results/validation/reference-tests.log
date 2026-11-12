@@ -1,0 +1,66 @@
+
+test_actual_checker_process (test_reference.IsolationTests.test_actual_checker_process) ... ok
+test_all_cases_through_process (test_reference.IsolationTests.test_all_cases_through_process) ... ok
+test_alpha_renamed_instances_work (test_reference.IsolationTests.test_alpha_renamed_instances_work) ... ok
+test_checker_import_boundary (test_reference.IsolationTests.test_checker_import_boundary) ... ok
+test_hidden_label_changes_no_runtime_bytes (test_reference.IsolationTests.test_hidden_label_changes_no_runtime_bytes) ... ok
+test_no_runtime_import_of_hidden_research (test_reference.IsolationTests.test_no_runtime_import_of_hidden_research) ... ok
+test_parent_environment_cannot_inject_answer (test_reference.IsolationTests.test_parent_environment_cannot_inject_answer) ... ok
+test_rust_dependency_boundary (test_reference.IsolationTests.test_rust_dependency_boundary) ... ok
+test_absence_is_not_negative (test_reference.SemanticTests.test_absence_is_not_negative) ... ok
+test_all_directed_cases_against_independent_oracle (test_reference.SemanticTests.test_all_directed_cases_against_independent_oracle) ... ok
+test_all_sixteen_evaluation_vectors (test_reference.SemanticTests.test_all_sixteen_evaluation_vectors) ... ok
+test_authority_scope_not_label (test_reference.SemanticTests.test_authority_scope_not_label) ... ok
+test_broken_gate (test_reference.SemanticTests.test_broken_gate) ... ok
+test_collector_cannot_read_expected_result (test_reference.SemanticTests.test_collector_cannot_read_expected_result) ... ok
+test_compromised_trusted_root_is_a_recorded_limit (test_reference.SemanticTests.test_compromised_trusted_root_is_a_recorded_limit) ... ok
+test_consulted_but_irrelevant_is_not_control (test_reference.SemanticTests.test_consulted_but_irrelevant_is_not_control) ... ok
+test_context_version_is_pinned (test_reference.SemanticTests.test_context_version_is_pinned) ... ok
+test_contract_must_predate_run (test_reference.SemanticTests.test_contract_must_predate_run) ... ok
+test_control_effect_binding (test_reference.SemanticTests.test_control_effect_binding) ... ok
+test_countermodel_projection_exact (test_reference.SemanticTests.test_countermodel_projection_exact) ... ok
+test_cyclic_program_fails_without_recursion (test_reference.SemanticTests.test_cyclic_program_fails_without_recursion) ... ok
+test_each_channel_tamper_detected (test_reference.SemanticTests.test_each_channel_tamper_detected) ... ok
+test_every_required_evidence_deletion_abstains (test_reference.SemanticTests.test_every_required_evidence_deletion_abstains) ... ok
+test_five_audit_failures (test_reference.SemanticTests.test_five_audit_failures) ... ok
+test_frozen_scope_not_log_driven (test_reference.SemanticTests.test_frozen_scope_not_log_driven) ... ok
+test_independent_interpreters_agree_on_dag_family (test_reference.SemanticTests.test_independent_interpreters_agree_on_dag_family) ... ok
+test_later_input_mutation_cannot_rewrite_world (test_reference.SemanticTests.test_later_input_mutation_cannot_rewrite_world) ... ok
+test_legitimate_applicability_change (test_reference.SemanticTests.test_legitimate_applicability_change) ... ok
+test_no_cherry_picking (test_reference.SemanticTests.test_no_cherry_picking) ... ok
+test_no_posthoc_contract (test_reference.SemanticTests.test_no_posthoc_contract) ... ok
+test_no_self_serving_applicability (test_reference.SemanticTests.test_no_self_serving_applicability) ... ok
+test_nominal (test_reference.SemanticTests.test_nominal) ... ok
+test_nonconformant_world_can_be_unknown (test_reference.SemanticTests.test_nonconformant_world_can_be_unknown) ... ok
+test_ordinary_logs_cannot_replace_structure (test_reference.SemanticTests.test_ordinary_logs_cannot_replace_structure) ... ok
+test_path_not_audit_failure (test_reference.SemanticTests.test_path_not_audit_failure) ... ok
+test_preservation_keeps_world_constant (test_reference.SemanticTests.test_preservation_keeps_world_constant) ... ok
+test_required_context_fields_cannot_be_omitted (test_reference.SemanticTests.test_required_context_fields_cannot_be_omitted) ... ok
+test_safe_refusal_not_failed_task (test_reference.SemanticTests.test_safe_refusal_not_failed_task) ... ok
+test_shadow (test_reference.SemanticTests.test_shadow) ... ok
+test_source_not_authority (test_reference.SemanticTests.test_source_not_authority) ... ok
+test_two_authorizations_need_two_subjects (test_reference.SemanticTests.test_two_authorizations_need_two_subjects) ... ok
+test_undeclared_extra_program_nodes_rejected (test_reference.SemanticTests.test_undeclared_extra_program_nodes_rejected) ... ok
+test_unknown_label_field_is_not_accepted (test_reference.SemanticTests.test_unknown_label_field_is_not_accepted) ... ok
+test_all_system_graphs_against_separate_algorithm (test_reference.SystemTests.test_all_system_graphs_against_separate_algorithm) ... ok
+test_bypass_not_shadow (test_reference.SystemTests.test_bypass_not_shadow) ... ok
+test_current_bypass_endpoint_exists_in_system_graph (test_reference.SystemTests.test_current_bypass_endpoint_exists_in_system_graph) ... ok
+test_instance_conformance_does_not_imply_coverage (test_reference.SystemTests.test_instance_conformance_does_not_imply_coverage) ... ok
+test_instance_conformance_does_not_imply_mediation (test_reference.SystemTests.test_instance_conformance_does_not_imply_mediation) ... ok
+test_unknown_exit_is_not_certified_by_empty_graph (test_reference.SystemTests.test_unknown_exit_is_not_certified_by_empty_graph) ... ok
+test_deterministic_parser_fuzz (test_reference.WireTests.test_deterministic_parser_fuzz) ... ok
+test_duplicate (test_reference.WireTests.test_duplicate) ... ok
+test_field_limit (test_reference.WireTests.test_field_limit) ... ok
+test_hex_uppercase (test_reference.WireTests.test_hex_uppercase) ... ok
+test_non_ascii_key (test_reference.WireTests.test_non_ascii_key) ... ok
+test_non_utf8 (test_reference.WireTests.test_non_utf8) ... ok
+test_order_canonical (test_reference.WireTests.test_order_canonical) ... ok
+test_oversize (test_reference.WireTests.test_oversize) ... ok
+test_truncated (test_reference.WireTests.test_truncated) ... ok
+test_two_concatenated_messages_rejected (test_reference.WireTests.test_two_concatenated_messages_rejected) ... ok
+test_unicode_roundtrip (test_reference.WireTests.test_unicode_roundtrip) ... ok
+
+----------------------------------------------------------------------
+Ran 60 tests in 18.474s
+
+OK

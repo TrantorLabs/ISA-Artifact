@@ -1,0 +1,6 @@
+{
+  "coverage": "1",
+  "mediation": "1",
+  "schema": "isa-system-report-1",
+  "scope": "declared-finite-graph"
+}
