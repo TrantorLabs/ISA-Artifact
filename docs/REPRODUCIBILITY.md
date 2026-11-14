@@ -1,5 +1,29 @@
 # 复现与验证说明
 
+## 当前正式仓的完整操作入口（与历史报告分开）
+
+首次使用请先看 [README 第一屏](../README.md#start-here--full-research-reproduction)：
+Ubuntu 24.04、Python 3.11+、Rust 1.85.0、Z3，以及独立
+LangGraph 实验所需的 `langgraph==1.2.20` 都有完整安装命令。
+
+在依赖安装完成、Python 虚拟环境激活后，完整验证分为已串联的两步：
+
+```bash
+bash scripts/reproduce.sh && python3 research/external/langgraph_counterexample.py --out results/validation/langgraph-counterexample.json
+```
+
+第一个命令要求 13 项正式门禁全部 PASS，`verification.json`
+须显示 `mode=full` 与 `release_ready=true`；第二个命令验证独立
+StateGraph 的 16 组布尔输入（每组分别执行两种控制路径）。
+参考正式 [v1.0.0 Release](https://github.com/TrantorLabs/ISA-Artifact/releases/tag/v1.0.0)
+及其 [CI 实际成功记录](https://github.com/TrantorLabs/ISA-Artifact/actions/runs/43225205830)。
+
+以下原有说明描述**初始 v0.1.0 交付时的冻结证据与限制**。
+这些历史记录保留原貌，不表示当前正式仓仍缺失 Rust 执行；
+也不把后来通过的 CI 追认为最初归档已经完成的验证。
+
+---
+
 > **历史与当前证据分位（2026-11）：**下文关于 Rust、Cargo 与 CI 尚未运行的描述，仅记录原始 v0.1.0 交付环境的历史事实，不能代表独立仓库当前状态。2026-11-10 的 [main 真实 FULL](https://github.com/RcityHunter/ISA-Artifact/actions/runs/42831891634) 已运行 Rust/Python/Z3 与 LangGraph；之后每一代码修订都需要其精确 HEAD 的独立成功记录。原始归档和初始验证 JSON 保持不变。
 ## 两类执行，不得互相冒充
 

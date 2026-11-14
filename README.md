@@ -2,6 +2,57 @@
 
 # ISA — Executable Research Artifact
 
+## Start here — full research reproduction
+
+**Recommended platform:** Ubuntu 24.04 x86_64 with Bash, Python >=3.11,
+**Rust/Cargo 1.85.0**, **Z3** and, for the independent Agent-framework test,
+**LangGraph 1.2.20**. No API key, real payment system, identity service or
+Docker is required. These checks use the local Rust/Python research models.
+
+**1. Install prerequisites** (requires network for initial tool downloads):
+
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential curl ca-certificates python3 python3-venv python3-pip z3 libz3-4
+if ! command -v rustup >/dev/null 2>&1; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal
+  . "$HOME/.cargo/env"
+fi
+rustup toolchain install 1.85.0 --profile minimal
+rustup override set 1.85.0
+python3 -m venv .venv
+. .venv/bin/activate
+python3 -m pip install --disable-pip-version-check langgraph==1.2.20
+python3 --version   # expected: 3.11 or newer
+rustc --version     # expected: 1.85.0
+z3 -version         # Z3 installed
+```
+
+**2. From the repository root, run both parts of the complete experiment:**
+
+```bash
+bash scripts/reproduce.sh && python3 research/external/langgraph_counterexample.py --out results/validation/langgraph-counterexample.json
+```
+
+This executes the **13 reference/formal/Rust/differential gates** and then
+the separate genuine LangGraph StateGraph A/B experiment. A successful
+`results/validation/verification.json` reports `mode=full`,
+`release_ready=true` and all 13 gates `PASS`. The freshly generated
+`results/validation/langgraph-counterexample.json` must report
+`status=PASS` and 16 input vectors per graph. Any missing dependency,
+nonzero exit, `BLOCKED` or `FAIL` is **not** full reproduction.
+
+**3. Explore the evidence:** see [Chinese reproducibility notes](docs/REPRODUCIBILITY.md),
+[ISA minimal proof and its limits](docs/ISA_MINIMAL_PROOF.md),
+[traceability](docs/TRACEABILITY.md), and the frozen
+[Chinese research manuscript](docs/paper/ISA_CN_v1.2_FINAL.md).
+The historical v0.1.0 archive and its `VALIDATION_INCOMPLETE` report
+remain intact: those statements describe that original checkpoint, **not**
+the validated [public v1.0.0 release](https://github.com/TrantorLabs/ISA-Artifact/releases/tag/v1.0.0).
+New edits on `main` do not retroactively modify the tagged release.
+
+---
+
 Independent, reproducible research artifact for **Internal Structured Alignment (ISA)**. ISA asks whether a designated safety constraint genuinely controlled a bounded high-consequence judgment–action formation, and whether independent evidence is sufficient to establish that fact.
 
 **Theory authority:** ISA Chinese paper **v1.2 FINAL** (frozen). This repository implements and evaluates its claims; code does not redefine the paper. The frozen paper source is [included locally](docs/paper/ISA_CN_v1.2_FINAL.md), with the six artifact contracts under [docs/anchors](docs/anchors/).
